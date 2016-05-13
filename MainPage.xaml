@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="CompositionExamples.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompositionExamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="pnlRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <local:CompositionImage x:Name="imgOriginal" Source="ms-appx:///Assets/testImage.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="300" Width="300" />
+
+        <Grid x:Name="pnlContainer">
+            <Grid x:Name="container" />
+            <Grid x:Name="containerColorBloom" />
+            <Grid x:Name="imageContainer" />
+        </Grid>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom"  Orientation="Horizontal">
+            <Button x:Name="btn1" Content="FullScreen" Margin="10 0" />
+            <Button x:Name="btn2" Content="Minimize" Margin="10 0" />
+        </StackPanel>
+
+    </Grid>
+</Page>
